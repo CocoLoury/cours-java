@@ -9,7 +9,7 @@ public class Main{
         p.setPrenom("YOYO");
         p.setDate_naiss(new GregorianCalendar(1998,11,16));
         System.out.println(p.getNom()+" "+p.getPrenom()+" "+p.calculAge());
-        Personne p2 = new Personne("MAN2", "JUL2", new GregorianCalendar(1998,11,16));
+        Personne p2 = new Personne("M   AN2", "JUL2", new GregorianCalendar(1998,11,16));
         p2.affichage();
         p2.affichage(true);
         p2.affichage(false);
