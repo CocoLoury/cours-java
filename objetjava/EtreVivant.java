@@ -1,4 +1,4 @@
-public abstract class EtreVivant{
+public abstract class EtreVivant {
     private double taille;
     private double poids;
 

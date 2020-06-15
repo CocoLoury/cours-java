@@ -1,6 +1,6 @@
 import java.util.GregorianCalendar;
 
-public class Personne extends EtreVivant{
+public class Personne extends EtreVivant implements Classable {
     // variable de class
     private String nom;
     private String prenom;
@@ -87,5 +87,23 @@ public class Personne extends EtreVivant{
     }
     public int getNumero(){
         return numero;
+    }
+
+    @Override
+    public int compare(Object o) {
+        Personne p;
+        if(o instanceof Personne){
+            p = (Personne)o;
+        }
+        else{
+            return  Classable.ERREUR;
+        }
+        if(getNom().compareTo(p.getNom()) < 0){
+            return Classable.INFERIEUR;
+        }
+        if(getNom().compareTo(p.getNom()) > 0){
+            return Classable.SUPERIEUR;
+        }
+        return Classable.EGAL;
     }
 }
